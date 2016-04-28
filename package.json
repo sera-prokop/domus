@@ -1,20 +1,19 @@
 {
-  "name": "standart",
-  "version": "7.7.7",
-  "description": "Hello world",
-  "main": "gulpfile.js",
+  "name": "sera.prokop",
+  "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lenchik-ponchik/hello-boilerplate.git"
+    "url": "https://github.com/sera-prokop/domus"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "gulp-cssnano": "*",
     "gulp-plumber": "*",
+    "gulp-notify": "*",
     "gulp-watch": "*"
   },
   "dependencies": {

@@ -1,1 +1,46 @@
+-
+  var navigation = {"Услуги": ["#",""],
+                    "Магазин": ["#",""],
+                    "Новости": ["#",""],
+                    "Партнерам": ["#",""],
+                    "Контакты": ["#",""],
+                    "Поиск": ["#","../img/search.svg"]
+                    }
+-
+  var submenu = {"Кухни" : ["#"],
+                 "Ремонт квартир" : ["#"],
+                 "Натяжные потолки" : ["#"],
+                 "Гардеробные системы" : ["#"],
+                      }
+
 header
+  section.header-top
+    .header-top__logo
+      img(src="img/logo.svg", alt="Logo").header-top__img
+      h1.header-top__title Domus Group
+    .header-top__menu.navigation
+      ul.navigation__list
+        each value, key in navigation
+          li.navigation__item
+            a(href="#{value[0]}").navigation__link= key
+              if(key==="Поиск")
+                img(src="#{value[1]}", alt="")
+            if(key === "Услуги")
+              ul.submenu__list
+                each value, key in submenu
+                  li.submenu__item
+                    a(href="#{value[0]}").submenu__link= key
+    .header-top__phone +7 (812) 677-51-40
+      span Заказать звонок
+
+
+  section.header-slider
+    img(src="../img/slider-img.png", alt="Furniture").header-slider__img
+    h2.header-slider__title Ремонт кухни
+    p.header-slider__name ЖК "Балтийская жемчужина"
+    .header-slider__more
+      a(href="#").header-slider__link
+        img(src="../img/more_white.svg", alt="Arrow")
+    .header-slider__switch
+      a(href="#").header-slider__arrow-left
+      a(href="#").header-slider__arrow-right

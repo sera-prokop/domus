@@ -1,1 +1,76 @@
+-
+  var map = { "Услуги" : [],
+              "Магазин" : [],
+              "Новости" : [],
+              "Партнерам" : [],
+              "Контакты" : []
+            }
+
+-
+  var services = {"Кухни" : [],
+                  "Ремонт" : [],
+                  "Натяжные потолки" : [],
+                  "Гардеробные системы" : [],
+  }
+
+-
+  var shop = {"Плитка" : [],
+              "Ламинат" : [],
+              "Столешницы" : [],
+              "Обои" : [],
+  }
+
+-
+  var news = {"Кухни" : [],
+              "Ремонт" : [],
+              "Натяжные потолки" : [],
+              "Гардеробные системы" : [],
+  }
+
+-
+  var social = {"Facebook" : [],
+                "Vk" : [],
+                "Twitter" : [],
+                "Instagram" : [],
+            }
+
 footer
+  section.footer-top
+
+    .footer-top__left
+      p.footer-top__left-address Кушелевская дорога, д3, к.2
+      p.footer-top__left-tel +7 (812) 905-74-71
+
+    .footer-top__center.footer-map
+      ul.footer-map__list
+        each value, key in map
+          li.footer-map__item
+            a(href="#").footer-map__link= key
+            if(key==="Услуги")
+              ul.map-submenu__list
+                each value, key in services
+                  li.map-submenu__item
+                    a(href="#").map-submenu__link= key
+            if(key==="Магазин")
+              ul.map-submenu__list
+                each value, key in shop
+                  li.map-submenu__item
+                    a(href="#").map-submenu__link= key
+            if(key==="Новости")
+              ul.map-submenu__list
+                each value, key in news
+                  li.map-submenu__item
+                    a(href="#").map-submenu__link= key
+
+
+    .footer-top__right.footer-social
+      h3.footer-social__title Мы в соцсетях:
+      ul.footer-social__list
+        each value, key in social
+          li.footer-social__item
+            a(href="#").footer-social__link= key
+
+  .footer-down
+    p.footer-down__copyright &copy; OMUS Group 2016. Использование материалов возможно только с предварительного согласия правообладателей.
+    p.footer-down__develop Разработка сайта
+      img(src="../img/itloft.svg", alt="Itloft")
