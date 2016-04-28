@@ -1,0 +1,6 @@
+/node_modules/
+/build
+/PSD
+.idea
+/bower_components
+.sass-cache
