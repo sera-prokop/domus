@@ -1,0 +1,13 @@
+/*-------IE8-------*/
+@import "../base/sprite";
+
+
+.header-top__logo{
+  img{
+    display: none;
+  }
+  a{
+    display: block;
+    @include sprite($logo);
+  }
+}

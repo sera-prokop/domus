@@ -1,0 +1,306 @@
+/*------Main welcome-------*/
+.main{
+  background: #fff;
+}
+.main-welcome{
+  background:#fff url(../img/main-welcome.png) 75px 0 no-repeat;
+  background-size: cover;
+  padding:60px 30px 40px 350px;
+  font-family: 'proxima_nova_ltlight', sans-serif;
+  color: #2e2e2e;
+  &__title{
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 30px;
+    line-height: 1.33;
+    margin: 0;
+  }
+  &__few{
+    font-size: 14px;
+    line-height: 2;
+    margin: 0;
+  }
+  &__open{
+    display: inline-block;
+    text-decoration: none;
+    color: #ed573e;
+    border-bottom: 1px dotted #ed573e;
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 14px;
+    line-height: 1;
+  }
+  &__much{
+    display: none;
+    font-size: 14px;
+    line-height: 2;
+    margin: 0;
+  }
+  &__close{
+    display: inline-block;
+    text-decoration: none;
+    color: #ed573e;
+    border-bottom: 1px dotted #ed573e;
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    display: none;
+  }
+}
+
+/*-------Main kitchen, repairs, roof, wardrobe-------*/
+
+.main-kitchen, .main-repairs, .main-roof, .main-wardrobe{
+  margin-bottom: 2px;
+  &__title{
+    width: 245px;
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 30px;
+    color: #2e2e2e;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  &__desc{
+    width: 245px;
+    font-family: 'proxima_nova_ltlight', sans-serif;
+    font-size: 14px;
+    line-height: 2;
+    margin: 0 0 35px 0;
+    color: #2e2e2e;
+    margin-top: 0;
+
+  }
+  &__more{
+
+  }
+  &__more-link{
+    background: url("../img/more_black.svg") 0 0 no-repeat;
+    background-size: cover;
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.main-kitchen{
+  background: #f4f4f6 url("../img/main-kitchen.png") 100% 0 no-repeat;
+  background-size: 100% 100%;
+  padding: 40px 0 40px 40px;
+}
+
+.main-repairs{
+  background: #e7e6e5 url("../img/main-repairs.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+  padding: 40px 0 40px 710px;
+}
+
+.main-roof{
+  background: #f4f4f6 url("../img/main-roof.png") 100% 0 no-repeat;
+  background-size: 65% 100%;
+  padding: 40px 0 60px 40px;
+}
+
+.main-wardrobe{
+  background: #f8f9fa url("../img/main-wardrobe.png") 0 0 no-repeat;
+  background-size: 75% auto;
+  padding: 40px 0 40px 710px;
+  margin-bottom: 55px;
+}
+
+/*-------Main work-------*/
+
+.main-work{
+  @include clearfix;
+  margin: 0 30px 60px 30px;
+  &__title{
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 30px;
+    color: #2e2e2e;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+  &__kitchen{
+    float: left;
+    width: 300px;
+
+  }
+  &__repairs{
+    float: left;
+    width: 300px;
+    margin-left: 20px;
+  }
+  &__roof{
+    float: left;
+    width: 300px;
+    margin-left: 20px;
+  }
+  &__look{
+    display: block;
+    text-align: center;
+  }
+  &__look-link{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px 10px 38px;
+    margin-top: 30px;
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+    color: #fff;
+    background: #ed573e;
+    border-radius: 20px;
+    text-transform: uppercase;
+    &:hover{
+      background: #dd4a31;
+    }
+    &:before{
+      content: "";
+      background: url("../img/inst.svg") 0 0 no-repeat;
+      position: absolute;
+      display: block;
+      left: 20px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+/*-------Main news-------*/
+
+.main-news{
+  background: #f5f3f3;
+  padding: 55px 30px 60px 30px;
+  @include clearfix;
+  overflow: hidden;
+  &__title{
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 30px;
+    color: #2e2e2e;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+  &__all-news{
+    margin-left: 30px;
+    font-size: 14px;
+    color: #ed573e;
+    border-bottom: 1px solid #f3ccc6;
+    text-decoration: none;
+    &:hover{
+      border-bottom: 1px solid #ed573e;
+    }
+  }
+  &__basis{
+    float: left;
+    width: 620px;
+    background: #fff;
+    color: #2e2e2e;
+    // padding-bottom: 60px;
+    padding-bottom: 20000px;
+    margin-bottom: -20000px;
+    img{
+      width: 620px;
+      height: 420px;
+      vertical-align: middle;
+      margin-bottom: 40px;
+    }
+    a{
+      display: inline-block;
+      padding: 6px 6px 6px 6px;
+      font-family: 'proxima_nova_rgbold', sans-serif;
+      font-size: 11px;
+      text-decoration: none;
+      color: #fff;
+      background: #ed573e;
+      border-radius: 20px;
+      text-transform: uppercase;
+      margin-right: 10px;
+      margin: 0 20px;
+      margin-bottom: 40px;
+    }
+    span{
+      font-family: 'proxima_nova_ltlight', sans-serif;
+      font-size: 12px;
+    }
+    h3{
+      font-size: 20px;
+      font-family: 'proxima_nova_rgbold', sans-serif;
+      margin: 0 20px 20px 20px;
+    }
+    p{
+      font-family: 'proxima_nova_ltlight', sans-serif;
+      margin: 0 20px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  }
+  &__secondary{
+    float: right;
+    width: 300px;
+    img{
+      width: 300px;
+      height: 185px;
+      vertical-align: middle;
+      margin-bottom: 20px;
+    }
+    a{
+      display: inline-block;
+      margin: 0 20px;
+      padding: 6px 6px 6px 6px;
+      font-family: 'proxima_nova_rgbold', sans-serif;
+      font-size: 11px;
+      text-decoration: none;
+      color: #fff;
+      background: #ed573e;
+      border-radius: 20px;
+      text-transform: uppercase;
+      margin-right: 10px;
+      margin-bottom: 25px;
+    }
+    span{
+      font-family: 'proxima_nova_ltlight', sans-serif;
+      font-size: 12px;
+      color: #2e2e2e;
+    }
+    p{
+      font-family: 'proxima_nova_ltlight', sans-serif;
+      margin: 0 20px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  }
+  &__secondary-top{
+    margin-bottom: 20px;
+    background: #fff;
+  }
+  &__secondary-down{
+    background: #fff;
+    // padding-bottom: 60px;
+    padding-bottom: 20000px;
+    margin-bottom: -20000px;
+  }
+}
+
+// .main-news{
+//   float: left;
+//   background: #eee;
+//   overflow: hidden;
+// }
+
+// .main-news__wrapper{
+//   float: left;
+//   background: #555;
+//   position: relative;
+//   left: 75%;
+// }
+
+// .main-news__secondary{
+//   float: left;
+//   width: 25%;
+//   position: relative;
+//   right: 75%;
+// }
+
+// .main-news__basis{
+//   float: left;
+//   width: 75%;
+//   position: relative;
+//   right: 75%;
+// }

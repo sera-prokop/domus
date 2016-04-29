@@ -12,7 +12,6 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),// Сжатие JPG, PNG, SVG, GIF
 
     uglify = require('gulp-uglify'), // Минификация JS
-
     plumber = require('gulp-plumber'),
     notify = require('gulp-notify'),
 
@@ -63,6 +62,7 @@ gulp.task('sass-dev', function() {
     .pipe(browserSync.stream());
 });
 
+
 //Сжатие изображений
 gulp.task('img', function() {
   return gulp.src('src/img/**/**/**')
@@ -109,9 +109,8 @@ gulp.task('fonts', function(){
 });
 
 
-
 // WATCH
-gulp.task('default', ['jade-templates','sass-dev','img','js-vendor','js','favicon','fonts'], function () {
+gulp.task('default', ['jade-templates','sass-dev', 'img','js-vendor', 'js','favicon','fonts'], function () {
 
     browserSync.init({
       server : './build'
@@ -124,6 +123,7 @@ gulp.task('default', ['jade-templates','sass-dev','img','js-vendor','js','favico
     watch(["./src/sass/**/*.scss",'./src/sass/_*.scss'], function() {
       gulp.start('sass-dev');
     });
+
 
     watch('./src/js/*.js', function() {
       gulp.start('js');

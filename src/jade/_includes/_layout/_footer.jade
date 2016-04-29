@@ -28,16 +28,19 @@
   }
 
 -
-  var social = {"Facebook" : [],
-                "Vk" : [],
-                "Twitter" : [],
-                "Instagram" : [],
+  var social = {"Facebook" : ["#", "fb"],
+                "Vk" : ["#", "vk"],
+                "Twitter" : ["#", "tw"],
+                "Instagram" : ["#", "inst"],
             }
 
-footer
+footer.footer
   section.footer-top
 
     .footer-top__left
+      .footer-top__logo
+        a(href="/")
+          img(src="img/logo.svg", alt="Logo").footer-top__img
       p.footer-top__left-address Кушелевская дорога, д3, к.2
       p.footer-top__left-tel +7 (812) 905-74-71
 
@@ -68,7 +71,7 @@ footer
       ul.footer-social__list
         each value, key in social
           li.footer-social__item
-            a(href="#").footer-social__link= key
+            a.footer-social__link(href="#" class="footer-social__link--#{value[1]}")= key
 
   .footer-down
     p.footer-down__copyright &copy; OMUS Group 2016. Использование материалов возможно только с предварительного согласия правообладателей.

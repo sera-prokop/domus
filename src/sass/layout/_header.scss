@@ -1,0 +1,128 @@
+/*--------------Header top--------------*/
+
+.header-top{
+  @include clearfix;
+  padding: 15px 30px;
+  background: #fff;
+  &__logo{
+    float: left;
+    width: 115px;
+    overflow: hidden;
+  }
+  &__title{
+    display: none;
+  }
+  &__menu{
+    float: left;
+    width: 650px;
+  }
+  &__phone{
+    float: right;
+    width: 175px;
+    font-family: 'proxima_novasemibold', sans-serif;
+    font-size: 21px;
+    line-height: 1.172;
+    text-align: right;
+    a{
+      display: block;
+      font-size: 14px;
+      color: #ed573e;
+    }
+  }
+}
+
+.navigation{
+  text-align: center;
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__item{
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 30px;
+    &:first-child{
+      padding-left: 0;
+    }
+    &--search{
+      padding-left: 20px;
+    }
+  }
+  &__link{
+    padding: 10px 0;
+    color: #2e2e2e;
+    text-decoration: none;
+    font-family: 'proxima_nova_ltlight', sans-serif;
+    font-size: 14px;
+    display: block;
+    border-bottom: 2px solid transparent;
+    &:hover{
+      border-bottom: 2px solid #ed573e;
+      color: #ed573e;
+    }
+    &--search{
+      font-size: 0;
+      width: 13px;
+      height: 13px;
+      padding: 10px;
+      &:hover{
+        border-bottom: 2px solid transparent;
+      }
+    }
+  }
+}
+
+.submenu{
+  display: none;
+}
+
+/*-------Header slider--------*/
+
+.header-slider{
+  position: relative;
+  &__img{
+    width: 1000px;
+    height: 400px;
+    vertical-align: middle;
+  }
+  &__desc{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+  }
+  &__title{
+    margin: 0;
+    font-family: 'proxima_novasemibold', sans-serif;
+    font-size: 30px;
+    line-height: 1.2;
+    color: #fff;
+  }
+  &__name{
+    margin: 10px 0;
+    font-family: 'proxima_novasemibold', sans-serif;
+    font-size: 21px;
+    line-height: 1.71;
+    color: #fff;
+  }
+  &__switch{
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+  }
+  &__arrow-left{
+    display: inline-block;
+    background: url("../img/arrow.svg") 0 0 no-repeat;
+    width: 36px;
+    height: 30px;
+  }
+  &__arrow-right{
+    display: inline-block;
+    background: url("../img/arrow_hover.svg") 0 0 no-repeat;
+    transform: scaleY(-1);
+    width: 36px;
+    height: 30px;
+  }
+}

@@ -16,31 +16,42 @@
 header
   section.header-top
     .header-top__logo
-      img(src="img/logo.svg", alt="Logo").header-top__img
-      h1.header-top__title Domus Group
+      a(href="/")
+        img(src="img/logo.svg", alt="Logo").header-top__img
+        h1.header-top__title Domus Group
     .header-top__menu.navigation
       ul.navigation__list
         each value, key in navigation
-          li.navigation__item
-            a(href="#{value[0]}").navigation__link= key
-              if(key==="Поиск")
-                img(src="#{value[1]}", alt="")
+            if(key==="Поиск")
+              li.navigation__item.navigation__item--search
+                a(href="#{value[0]}").navigation__link.navigation__link--search Поиск
+                  svg(xmlns='http://www.w3.org/2000/svg', width='13', height='13', viewbox='0 0 13 13')
+                    style(type='text/css').
+                      <![CDATA[
+                      .firstb { fill: #000;}
+                      a:hover .firstb{ fill: #ed573e; }
+                      ]]>
+                    path.firstb(fill='#2E2E2E', d='M12 13a.978.978 0 0 1-.703-.297l-2.68-2.672A5.498 5.498 0 0 1 0 5.5C0 2.461 2.461 0 5.5 0a5.498 5.498 0 0 1 4.531 8.617l2.68 2.68c.18.18.289.437.289.703 0 .547-.453 1-1 1zM5.5 2C3.57 2 2 3.57 2 5.5S3.57 9 5.5 9 9 7.43 9 5.5 7.43 2 5.5 2z')
+            else
+              li.navigation__item
+                a(href="#{value[0]}").navigation__link= key
             if(key === "Услуги")
-              ul.submenu__list
+              ul.submenu
                 each value, key in submenu
                   li.submenu__item
                     a(href="#{value[0]}").submenu__link= key
     .header-top__phone +7 (812) 677-51-40
-      span Заказать звонок
+      a(href="#") Заказать звонок
 
 
   section.header-slider
     img(src="../img/slider-img.png", alt="Furniture").header-slider__img
-    h2.header-slider__title Ремонт кухни
-    p.header-slider__name ЖК "Балтийская жемчужина"
-    .header-slider__more
-      a(href="#").header-slider__link
-        img(src="../img/more_white.svg", alt="Arrow")
+    .header-slider__desc
+      h2.header-slider__title Ремонт кухни
+      p.header-slider__name ЖК «Балтийская жемчужина»
+      .header-slider__more
+        a(href="#").header-slider__link
+          img(src="../img/more_white.svg", alt="Arrow")
     .header-slider__switch
       a(href="#").header-slider__arrow-left
       a(href="#").header-slider__arrow-right
