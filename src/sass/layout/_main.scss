@@ -68,15 +68,13 @@
     margin-top: 0;
 
   }
-  &__more{
-
-  }
   &__more-link{
-    background: url("../img/more_black.svg") 0 0 no-repeat;
-    background-size: cover;
-    display: block;
+    display: inline-block;
     width: 30px;
     height: 30px;
+    &:hover .main-kitchen__svg{
+      fill: #ed573e;
+    }
   }
 }
 
@@ -214,6 +212,9 @@
       margin-right: 10px;
       margin: 0 20px;
       margin-bottom: 40px;
+      &:hover{
+        background: #dd4a31;
+      }
     }
     span{
       font-family: 'proxima_nova_ltlight', sans-serif;
@@ -253,6 +254,9 @@
       text-transform: uppercase;
       margin-right: 10px;
       margin-bottom: 25px;
+      &:hover{
+        background: #dd4a31;
+      }
     }
     span{
       font-family: 'proxima_nova_ltlight', sans-serif;
@@ -277,30 +281,3 @@
     margin-bottom: -20000px;
   }
 }
-
-// .main-news{
-//   float: left;
-//   background: #eee;
-//   overflow: hidden;
-// }
-
-// .main-news__wrapper{
-//   float: left;
-//   background: #555;
-//   position: relative;
-//   left: 75%;
-// }
-
-// .main-news__secondary{
-//   float: left;
-//   width: 25%;
-//   position: relative;
-//   right: 75%;
-// }
-
-// .main-news__basis{
-//   float: left;
-//   width: 75%;
-//   position: relative;
-//   right: 75%;
-// }

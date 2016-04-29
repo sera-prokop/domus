@@ -107,6 +107,9 @@
     line-height: 1.71;
     color: #fff;
   }
+  &:hover .header-slider__svg{
+    fill: #ccc;
+  }
   &__switch{
       position: absolute;
       right: 30px;
@@ -117,12 +120,18 @@
     background: url("../img/arrow.svg") 0 0 no-repeat;
     width: 36px;
     height: 30px;
+    &:hover{
+      background: url("../img/arrow_hover1.svg") 0 0 no-repeat;
+    }
   }
   &__arrow-right{
     display: inline-block;
-    background: url("../img/arrow_hover.svg") 0 0 no-repeat;
+    background: url("../img/arrow1.svg") 0 0 no-repeat;
     transform: scaleY(-1);
     width: 36px;
     height: 30px;
+    &:hover{
+      background: url("../img/arrow_hover.svg") 0 0 no-repeat;
+    }
   }
 }

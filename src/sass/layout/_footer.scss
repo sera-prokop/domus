@@ -126,24 +126,27 @@
   &__link{
     display: block;
     &--fb{
-      background: url("../img/fb.svg") 0 0 no-repeat;
+      // background: url("../img/fb.svg") 0 0 no-repeat;
       width: 10px;
       height: 19px;
     }
     &--vk{
-      background: url("../img/vk.svg") 0 0 no-repeat;
+      // background: url("../img/vk.svg") 0 0 no-repeat;
       width: 22px;
       height: 13px;
     }
     &--tw{
-      background: url("../img/twitter.svg") 0 0 no-repeat;
+      // background: url("../img/twitter.svg") 0 0 no-repeat;
       width: 18px;
       height: 15px;
     }
     &--inst{
-      background: url("../img/instagram.svg") 0 0 no-repeat;
+      // background: url("../img/instagram.svg") 0 0 no-repeat;
       width: 18px;
       height: 18px;
+    }
+    &:hover .footer-social__link--svg{
+      fill: #525252;
     }
   }
 }
