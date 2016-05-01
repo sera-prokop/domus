@@ -24,6 +24,7 @@
     "gulp-imagemin": "*",
     "gulp-jade": "*",
     "gulp-sass": "*",
+    "gulp-rigger": "*",
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*"
   }

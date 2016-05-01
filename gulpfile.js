@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'), // Автопрефиксы CSS
 
     imagemin = require('gulp-imagemin'),// Сжатие JPG, PNG, SVG, GIF
-
+    rigger = require('gulp-rigger'),
     uglify = require('gulp-uglify'), // Минификация JS
     plumber = require('gulp-plumber'),
     notify = require('gulp-notify'),
@@ -74,6 +74,7 @@ gulp.task('img', function() {
 gulp.task('js', function(){
   return gulp.src('src/js/*.js')
   .pipe(plumber())
+  .pipe(rigger())
   .pipe(uglify())
   .pipe(concat('script.js'))
   .pipe(gulp.dest('build/js/'))
@@ -85,6 +86,7 @@ gulp.task('js', function(){
 gulp.task('js-vendor', function(){
   return gulp.src('src/js/vendor/*.js')
   .pipe(plumber())
+  .pipe(rigger())
   .pipe(uglify())
   .pipe(concat('vendor.js'))
   .pipe(gulp.dest('build/js/vendor/'))

@@ -1,1 +1,2 @@
-console.log('hello from vendor.js');
+//= ../../../bower_components/jquery/dist/jquery.min.js
+//= ../../../node_modules/readmore-js/readmore.min.js

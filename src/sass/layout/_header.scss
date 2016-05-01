@@ -8,6 +8,9 @@
     float: left;
     width: 115px;
     overflow: hidden;
+    a{
+      display: block;
+    }
   }
   &__title{
     display: none;
@@ -19,7 +22,7 @@
   &__phone{
     float: right;
     width: 175px;
-    font-family: 'proxima_novasemibold', sans-serif;
+    font-family: 'proxima_nova_rgbold', sans-serif;
     font-size: 21px;
     line-height: 1.172;
     text-align: right;
@@ -27,6 +30,9 @@
       display: block;
       font-size: 14px;
       color: #ed573e;
+      &:hover{
+        color: #dd4a31;
+      }
     }
   }
 }
@@ -39,6 +45,7 @@
     list-style-type: none;
     display: inline-block;
     vertical-align: middle;
+    position: relative;
   }
   &__item{
     display: inline-block;
@@ -46,6 +53,14 @@
     padding-left: 30px;
     &:first-child{
       padding-left: 0;
+    }
+    &--services{
+      &:hover .header-submenu{
+        // display: block;
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.3s linear;
+      }
     }
     &--search{
       padding-left: 20px;
@@ -75,9 +90,67 @@
   }
 }
 
-.submenu{
-  display: none;
+/* -------- Submenu --------- */
+
+.header-submenu{
+  // display: none;
+  visibility: hidden;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+  background: rgba(241, 241, 242, 0.9);
+  position: absolute;
+  left: -20px;
+  top: 57px;
+  z-index: 10;
+  &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 30px;
+    top: -28px;
+  }
+  &__link{
+    display: block;
+    text-decoration: none;
+    line-height: 2.86;
+    font-size: 14px;
+    padding: 0 20px;
+    color: #2e2e2e;
+    font-family: 'proxima_nova_ltlight', sans-serif;
+    &:hover{
+      background: rgba(238, 102, 80, 0.9);
+      color: #fff;
+    }
+    &--kitchen{
+      &:hover:before{
+      border-color: transparent transparent rgba(238, 102, 80, 0.9) transparent;
+    }
+      &:before{
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 6.5px 10px 6.5px;
+        border-color: transparent transparent rgba(241, 241, 242, 0.9) transparent;
+        position: absolute;
+        top: -9px;
+        left: 33px;
+        z-index: -10;
+      }
+    }
+  }
 }
+
+
+
+// .header-submenu:hover:before{
+//   border-color: transparent transparent rgba(238, 102, 80, 0.9) transparent;
+// }
 
 /*-------Header slider--------*/
 
@@ -95,20 +168,22 @@
   }
   &__title{
     margin: 0;
-    font-family: 'proxima_novasemibold', sans-serif;
+    font-family: 'proxima_nova_rgbold', sans-serif;
     font-size: 30px;
     line-height: 1.2;
     color: #fff;
   }
+  &__link{
+    &:hover .header-slider__svg{
+      fill: #ccc;
+    }
+  }
   &__name{
     margin: 10px 0;
-    font-family: 'proxima_novasemibold', sans-serif;
+    font-family: 'proxima_nova_rgbold', sans-serif;
     font-size: 21px;
     line-height: 1.71;
     color: #fff;
-  }
-  &:hover .header-slider__svg{
-    fill: #ccc;
   }
   &__switch{
       position: absolute;
