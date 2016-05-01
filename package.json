@@ -12,9 +12,10 @@
   "license": "ISC",
   "devDependencies": {
     "gulp-cssnano": "*",
-    "gulp-plumber": "*",
     "gulp-notify": "*",
-    "gulp-watch": "*"
+    "gulp-plumber": "*",
+    "gulp-watch": "*",
+    "readmore-js": "*"
   },
   "dependencies": {
     "browser-sync": "*",
