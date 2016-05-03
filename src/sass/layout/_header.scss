@@ -197,6 +197,9 @@
     line-height: 1.71;
     color: #fff;
   }
+  &__more{
+    display: inline-block;
+  }
   &__link{
     display: block;
   }
@@ -205,16 +208,42 @@
       right: 30px;
       bottom: 30px;
   }
-  &__arrow-left{
-    display: inline-block;
-    background: url("../img/arrow.svg") 0 0 no-repeat;
-    width: 36px;
-    height: 30px;
-    &:hover{
-      background: url("../img/arrow_hover1.svg") 0 0 no-repeat;
-    }
+  // &__arrow-left{
+  //   display: inline-block;
+  //   background: url("../img/arrow.svg") 0 0 no-repeat;
+  //   width: 36px;
+  //   height: 30px;
+  //   &:hover{
+  //     background: url("../img/arrow_hover1.svg") 0 0 no-repeat;
+  //   }
+  // }
+  // &__arrow-right{
+  //   display: inline-block;
+  //   background: url("../img/arrow1.svg") 0 0 no-repeat;
+  //   transform: scaleY(-1);
+  //   width: 36px;
+  //   height: 30px;
+  //   &:hover{
+  //     background: url("../img/arrow_hover.svg") 0 0 no-repeat;
+  //   }
+  // }
+}
+.owl-controls{
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.owl-controls .owl-prev{
+  display: inline-block;
+  background: url("../img/arrow.svg") 0 0 no-repeat;
+  width: 36px;
+  height: 30px;
+  &:hover{
+    background: url("../img/arrow_hover1.svg") 0 0 no-repeat;
   }
-  &__arrow-right{
+}
+
+.owl-controls .owl-next{
     display: inline-block;
     background: url("../img/arrow1.svg") 0 0 no-repeat;
     transform: scaleY(-1);
@@ -224,7 +253,6 @@
       background: url("../img/arrow_hover.svg") 0 0 no-repeat;
     }
   }
-}
 
 /*-------- Slider hovers ---------*/
 // .header-slider__title-link:hover{

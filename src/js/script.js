@@ -10,6 +10,19 @@ $(document).ready(function(){
   lessLink: '<a href="#" class="main-welcome__close">Свернуть</a>'
 });
 
+
+//----------Slider owl.carousel.js----------
+
+  $(".owl-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    nav:true,
+    navText: false,
+    // autoplay: true,
+    autoplayHoverPause: true
+  });
+
+
 //----------Popup----------
 
   var popupOpen = $('.header-top__phone'),
@@ -32,33 +45,78 @@ $(document).ready(function(){
   });
 
 //---------- Hover ----------
-  var mouseOverOut = $(".header-slider__title, .header-slider__more, .main-kitchen__title, .main-kitchen__more, .main-repairs__title, .main-repairs__more, .main-roof__title, .main-roof__more, .main-wardrobe__title, .main-wardrobe__more")
 
-  mouseOverOut.mouseover(function(){
+  var mouseOverOut = $('.main-kitchen__title, .main-kitchen__more, .main-repairs__title, .main-repairs__more, .main-roof__title, .main-roof__more, .main-wardrobe__title, .main-wardrobe__more'),
+      mouseOverOutHeader = $('.header-slider__title, .header-slider__more');
 
-    $(this).find('a').css({"color": "#ed573e", "transition": "color 0.25s"});
+  mouseOverOutHeader.on('mouseover', function(){
+    var hoverTitleColorTitle = $(this).find('a'),
+        hoverTitleColorSvg = $(this).nextAll('[class $= more]').find('.svg'),
+        hoverSvgColorTitle = $(this).prevAll('h2').find('a'),
+        hoverSvgColorSvg = $(this).find('.svg');
 
-    $(this).nextAll('[class $= more]').find('.svg').css({"fill": "#ed573e", "transition": "fill 0.25s"});
 
-    $(this).prevAll('h2').find('a').css({"color": "#ed573e", "transition": "color 0.25s"});
+    hoverTitleColorTitle.css({"color": "#ed573e", "transition": "color 0.25s"});
 
-    $(this).find('.svg').css({"fill": "#ed573e", "transition": "fill 0.25s"});
+    hoverTitleColorSvg.css({"fill": "#ed573e", "transition": "fill 0.25s"});
 
-  });
+    hoverSvgColorTitle.css({"color": "#ed573e", "transition": "color 0.25s"});
 
-  mouseOverOut.mouseout(function(){
-
-      $(this).find('a').css("color", "#2e2e2e");
-
-      $(this).nextAll('[class $= more]').find('.svg').css("fill", "#2e2e2e");
-
-      $(this).prevAll('h2').find('a').css("color", "#2e2e2e");
-
-      $(this).find('.svg').css("fill", "#2e2e2e");
-
+    hoverSvgColorSvg.css({"fill": "#ed573e", "transition": "fill 0.25s"});
 
   });
 
+  mouseOverOutHeader.on('mouseout', function(){
+    var hoverTitleColorTitle = $(this).find('a'),
+        hoverTitleColorSvg = $(this).nextAll('[class $= more]').find('.svg'),
+        hoverSvgColorTitle = $(this).prevAll('h2').find('a'),
+        hoverSvgColorSvg = $(this).find('.svg');
+
+      hoverTitleColorTitle.css("color", "#fff");
+
+      hoverTitleColorSvg.css("fill", "#fff");
+
+      hoverSvgColorTitle.css("color", "#fff");
+
+      hoverSvgColorSvg.css("fill", "#fff");
+
+
+  });
+
+  mouseOverOut.on('mouseover', function(){
+
+    var hoverTitleColorTitle = $(this).find('a'),
+        hoverTitleColorSvg = $(this).nextAll('[class $= more]').find('.svg'),
+        hoverSvgColorTitle = $(this).prevAll('h2').find('a'),
+        hoverSvgColorSvg = $(this).find('.svg');
+
+
+    hoverTitleColorTitle.css({"color": "#ed573e", "transition": "color 0.25s"});
+
+    hoverTitleColorSvg.css({"fill": "#ed573e", "transition": "fill 0.25s"});
+
+    hoverSvgColorTitle.css({"color": "#ed573e", "transition": "color 0.25s"});
+
+    hoverSvgColorSvg.css({"fill": "#ed573e", "transition": "fill 0.25s"});
+
+  });
+
+  mouseOverOut.on('mouseout', function(){
+
+    var hoverTitleColorTitle = $(this).find('a'),
+        hoverTitleColorSvg = $(this).nextAll('[class $= more]').find('.svg'),
+        hoverSvgColorTitle = $(this).prevAll('h2').find('a'),
+        hoverSvgColorSvg = $(this).find('.svg');
+
+      hoverTitleColorTitle.css("color", "#2e2e2e");
+
+      hoverTitleColorSvg.css("fill", "#2e2e2e");
+
+      hoverSvgColorTitle.css("color", "#2e2e2e");
+
+      hoverSvgColorSvg.css("fill", "#2e2e2e");
+
+  });
 
 
 });
