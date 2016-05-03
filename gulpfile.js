@@ -87,8 +87,8 @@ gulp.task('js-vendor', function(){
   return gulp.src('src/js/vendor/*.js')
   .pipe(plumber())
   .pipe(rigger())
-  .pipe(uglify())
-  .pipe(concat('vendor.js'))
+  // .pipe(uglify())
+  // .pipe(concat('vendor.js'))
   .pipe(gulp.dest('build/js/vendor/'))
   .pipe(browserSync.stream());
 });

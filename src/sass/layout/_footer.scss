@@ -31,9 +31,12 @@
     position: relative;
     font-size: 14px;
     font-family: 'proxima_nova_ltlight', sans-serif;
-    color: #2e2e2e;
     padding-left: 20px;
     margin: 0;
+  }
+  &__left-tel-link{
+    color: #2e2e2e;
+    text-decoration: none;
     &:before{
       content: "";
       background: url("../img/phone.svg") 0 0 no-repeat;
@@ -43,6 +46,10 @@
       left: 0;
       width: 11px;
       height: 11px;
+    }
+    &:hover{
+      color: #000;
+      text-decoration: underline;
     }
   }
   &__center{
@@ -168,14 +175,22 @@
     margin: 0;
   }
   &__develop{
-    // float: right;
     display: inline-block;
     vertical-align: middle;
     width: 170px;
     margin: 0;
-    img{
+    text-decoration: none;
+    color: #a5a5a5;
+    margin-right: 10px;
+    svg{
       vertical-align: middle;
-      padding-left: 10px;
+      margin-left: 10px;
+    }
+    &:hover{
+      color: #525252;
+    }
+    &:hover .footer-down__svg{
+      fill: #525252;
     }
   }
 }

@@ -31,4 +31,38 @@ $(document).ready(function(){
     }
   });
 
+//---------- Hover ----------
+  var mouseOverOut = $(".header-slider__title, .header-slider__more, .main-kitchen__title, .main-kitchen__more, .main-repairs__title, .main-repairs__more, .main-roof__title, .main-roof__more, .main-wardrobe__title, .main-wardrobe__more")
+
+  mouseOverOut.mouseover(function(){
+
+    $(this).find('a').css({"color": "#ed573e", "transition": "color 0.25s"});
+
+    $(this).nextAll('[class $= more]').find('.svg').css({"fill": "#ed573e", "transition": "fill 0.25s"});
+
+    $(this).prevAll('h2').find('a').css({"color": "#ed573e", "transition": "color 0.25s"});
+
+    $(this).find('.svg').css({"fill": "#ed573e", "transition": "fill 0.25s"});
+
+  });
+
+  mouseOverOut.mouseout(function(){
+
+      $(this).find('a').css("color", "#2e2e2e");
+
+      $(this).nextAll('[class $= more]').find('.svg').css("fill", "#2e2e2e");
+
+      $(this).prevAll('h2').find('a').css("color", "#2e2e2e");
+
+      $(this).find('.svg').css("fill", "#2e2e2e");
+
+
+  });
+
+
+
 });
+
+
+
+

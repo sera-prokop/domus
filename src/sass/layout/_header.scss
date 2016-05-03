@@ -50,7 +50,8 @@
   &__item{
     display: inline-block;
     vertical-align: middle;
-    padding-left: 30px;
+    // padding-left: 30px;
+    // position: relative;
     &:first-child{
       padding-left: 0;
     }
@@ -67,24 +68,36 @@
     }
   }
   &__link{
-    padding: 10px 0;
+    padding: 10px 15px;
     color: #2e2e2e;
     text-decoration: none;
     font-family: 'proxima_nova_ltlight', sans-serif;
     font-size: 14px;
     display: block;
-    border-bottom: 2px solid transparent;
-    &:hover{
-      border-bottom: 2px solid #ed573e;
-      color: #ed573e;
+    position: relative;
+    &:after{
+      content: "";
+      position: absolute;
+      transition: all 0.5s ease-in-out;
+    }
+    &:hover:after{
+      content: "";
+      height: 2px;
+      background: #ed573e;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: -35px;
+      right: 66px;
+      transform: translate(50px,0);
     }
     &--search{
       font-size: 0;
       width: 13px;
       height: 13px;
       padding: 10px;
-      &:hover{
-        border-bottom: 2px solid transparent;
+      &:hover:after{
+        display: none;
       }
     }
   }
@@ -102,8 +115,8 @@
   text-align: left;
   background: rgba(241, 241, 242, 0.9);
   position: absolute;
-  left: -20px;
-  top: 57px;
+  left: -5px;
+  top: 55px;
   z-index: 10;
   &:before{
     content: "";
@@ -173,10 +186,9 @@
     line-height: 1.2;
     color: #fff;
   }
-  &__link{
-    &:hover .header-slider__svg{
-      fill: #ccc;
-    }
+  &__title-link{
+    text-decoration: none;
+    color: #fff;
   }
   &__name{
     margin: 10px 0;
@@ -184,6 +196,9 @@
     font-size: 21px;
     line-height: 1.71;
     color: #fff;
+  }
+  &__link{
+    display: block;
   }
   &__switch{
       position: absolute;
@@ -210,3 +225,30 @@
     }
   }
 }
+
+/*-------- Slider hovers ---------*/
+// .header-slider__title-link:hover{
+//   color: #ed573e;
+// }
+
+// .header-slider__title-link:hover ~ .header-slider__more .header-slider__svg{
+//       fill: #ed573e;
+// }
+
+// .header-slider__link{
+//     &:hover .header-slider__svg{
+//       fill: #ed573e;
+//     }
+// }
+
+// .header-slider__more:hover:first-child{
+//   color: #ccc;
+// }
+
+// .header-slider__title:hover .header-slider__title-link{
+//   color: #ccc;
+// }
+
+// .header-slider__title:hover .header-slider__svg{
+//   fill: #ccc;
+// }

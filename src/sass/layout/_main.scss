@@ -3,8 +3,8 @@
   background: #fff;
 }
 .main-welcome{
-  background:#fff url(../img/main-welcome.png) 75px 50% no-repeat;
-  // background-size: contain;
+  background:#fff url(../img/main-welcome.png) 75px 100% no-repeat;
+  // background-size: 100% 100%;
   padding:60px 30px 40px 350px;
   font-family: 'proxima_nova_ltlight', sans-serif;
   color: #2e2e2e;
@@ -56,6 +56,10 @@
     color: #2e2e2e;
     margin-top: 0;
     margin-bottom: 20px;
+  }
+  &__title-link{
+    text-decoration: none;
+    color: #2e2e2e;
   }
   &__desc{
     width: 245px;
@@ -220,9 +224,22 @@
       font-size: 12px;
     }
     h3{
-      font-size: 20px;
       font-family: 'proxima_nova_rgbold', sans-serif;
-      margin: 0 20px 20px 20px;
+      margin: 0 20px 10px 20px;
+      a{
+        font-size: 20px;
+        text-decoration: none;
+        padding: 0;
+        background: none;
+        color: #000;
+        margin: 0;
+        text-transform: none;
+        &:hover{
+          background: none;
+          color: #aaa;
+          transition: color 0.25s;
+        }
+      }
     }
     p{
       font-family: 'proxima_nova_ltlight', sans-serif;
