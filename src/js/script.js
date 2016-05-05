@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 //----------Readmore----------
 
-  $('.main-welcome__much').readmore({
+  $('.main-welcome__much, .kitchen-steps__descr').readmore({
   speed: 375,
   collapsedHeight: 90,
   embedCSS: false,

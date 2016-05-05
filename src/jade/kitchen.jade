@@ -1,5 +1,6 @@
 doctype html
 html(lang="ru-RU")
+  block head
     include ./_includes/_head/_head.jade
   body
     .wrapper
@@ -8,4 +9,5 @@ html(lang="ru-RU")
         include ./_includes/_layout/_main-kitchen.jade
         include ./_includes/_layout/_footer.jade
     include ./_includes/_layout/_call.jade
+    block script
       include ./_includes/_layout/_script.jade

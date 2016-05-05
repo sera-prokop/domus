@@ -75,7 +75,7 @@
     border-radius: 20px;
     border: 0;
     background: #ed573e;
-    font-family: 'proxima_nova_ltlight', sans-serif;
+    font-family: 'proxima_nova_rgbold', sans-serif;
     font-size: 11px;
     line-height: 2.2;
     color: #fff;
@@ -93,24 +93,354 @@
 
 .kitchen-steps{
   @include clearfix;
-  background: #fff url("../img/kitchen/steps-pic.png") 0 0 no-repeat;
-  &__left{
-    float: left;
-    width: 325px;
-    background: #fff url("../img/kitchen/steps-pic.png") 0 0 no-repeat;
-    background-size: 100% 100%;
-    padding: 1px;
+  background: #fff url("../img/kitchen/steps-pic.png") 0 100% no-repeat;
+  padding: 50px 50px 50px 350px;
+  color: #2e2e2e;
+  &__title{
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  &__descr{
+    font-family: 'proxima_nova_ltlight', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 0 10px 0;
+  }
+}
+
+
+/*-------- Kitchen slider --------*/
+
+
+.kitchen-slider{
+  padding: 30px 50px;
+  background: #f7f7f7;
+  &__menu{
+    text-align: justify;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #eaeaea;
+    &:after{
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 0;
+      font-size: 0;
+    }
+  }
+  &__list{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  &__item{
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 21px;
 
   }
-  &__right{
+  &__link{
+    color: #777;
+    text-decoration: none;
+    padding-bottom: 28px;
+    &:hover{
+      color: #2e2e2e;
+      border-bottom: 2px solid #ed573e;
+    }
+  }
+  &__download{
+    background: #ed573e;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px 15px 40px;
+    font-size: 11px;
+    text-transform: uppercase;
+    position: relative;
+    border-radius: 20px;
+    &:before{
+      content: "";
+      background: url("../img/book.svg") 0 0 no-repeat;
+      position: absolute;
+      display: block;
+      left: 20px;
+      width: 13px;
+      height: 12px;
+    }
+    &:hover{
+      background: #dd4a31;
+    }
+  }
+  &-submenu{
+    width: 100%;
+    text-align: justify;
+    &:after{
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 0;
+      font-size: 0;
+    }
+    &__list{
+      display: inline;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    &__item{
+      display: inline-block;
+      vertical-align: middle;
+      width: 100px;
+    }
+    &__link{
+      text-decoration: none;
+      font-family: 'proxima_nova_ltlight', sans-serif;
+      font-size: 14px;
+      color: #2e2e2e;
+    }
+    &__img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+}
+
+
+
+/*-------- Kitchen work --------*/
+
+.kitchen-work{
+  padding: 60px 30px;
+  background: #fff;
+  font-size: 0;
+  &__title{
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 25px;
+  }
+  &__block{
+    margin: 0 20px 20px 0;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    vertical-align: middle;
+    &:nth-child(3n+1){
+      margin-right: 0;
+    }
+  }
+  &__link{
+      display: block;
+    img{
+      vertical-align: middle;
+    }
+  }
+  &__look{
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+  }
+  &__look-link{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px 10px 38px;
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+    color: #fff;
+    background: #ed573e;
+    border-radius: 20px;
+    text-transform: uppercase;
+    &:hover{
+      background: #dd4a31;
+    }
+    &:before{
+      content: "";
+      background: url("../img/inst.svg") 0 0 no-repeat;
+      position: absolute;
+      display: block;
+      left: 20px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+
+/*-------- Kitchen examples --------*/
+
+.kitchen-examples{
+  padding: 55px 0;
+  background: #f5f3f3;
+  &__title{
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 20px;
+    padding-left: 30px;
+  }
+  &__descr{
+    padding-left: 30px;
+    font-family: 'proxima_nova_ltlight', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+    padding-bottom: 30px;
+    span{
+      display: block;
+    }
+  }
+  &__slider-block{
+    @include clearfix;
+  }
+  &__3d{
+    position: relative;
+    float: left;
+    width: 497px;
+    margin-right: 3px;
+    img{
+      vertical-align: middle;
+      width: 100%;
+      height: 340px;
+    }
+  }
+  &__3d-span{
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    position: absolute;
+    right: 30px;
+    top:30px;
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #2e2e2e;
+    }
+  &__project{
     float: right;
-    width: 675px;
-    box-sizing: border-box;
-    padding: 50px 50px 50px 25px;
-    background: #fff;
+    width: 500px;
+    position: relative;
+    img{
+      vertical-align: middle;
+      height: 340px;
+      width: 100%;
+    }
+  }
+  &__project-span{
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    position: absolute;
+    left: 30px;
+    top:30px;
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #2e2e2e;
+  }
+  &__overview{
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 30px 30px 0 30px;
+  }
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  &__item{
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    span{
+      font-family: 'proxima_nova_ltlight', sans-serif;
+      padding-left: 5px;
+    }
+  }
+  &__profect-descr{
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 30px;
+    font-family: 'proxima_nova_ltlight', sans-serif;
+    p{
+      margin: 0;
+    }
+    a{
+      color: #ed573e;
+      text-decoration: none;
+      &:hover{
+        color: #dd4a31;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+
+/*-------- Kitchen konsultation --------*/
+
+.kitchen-consultation{
+  background: url("../img/kitchen/consultation-bg.png") 0 0 no-repeat;
+  // background-size: cover;
+  background-size: 100% 100%;
+  padding: 30px 110px;
+  @include clearfix;
+  &__left{
+    float: left;
+    width: 540px;
   }
   &__title{
     font-family: 'proxima_nova_rgbold', sans-serif;
     font-size: 30px;
+    margin: 0;
+    color: #2e2e2e;
+    padding-top: 20px;
+    span{
+      display: block;
+    }
+  }
+  &__right{
+    float: right;
+    width: 240px;
+  }
+  &__input{
+    padding: 8px 15px;
+    border: 1px solid #dadada;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'proxima_nova_ltlight', sans-serif;
+    font-size: 11px;
+    line-height: 2.2;
+    outline: none;
+    color: #2e2e2e;
+  }
+  &__button{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 0;
+    background: #ed573e;
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 11px;
+    line-height: 2.2;
+    color: #fff;
+    text-transform: uppercase;
+    outline: none;
+    &:hover{
+      background: #dd4a31;
+    }
   }
 }
+
+
+/*-------- Kitchen reviews --------*/
+
+
