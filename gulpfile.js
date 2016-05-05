@@ -20,7 +20,7 @@ var gulp = require('gulp'),
 
 //Собираем Jade ( html )
 gulp.task('jade-templates', function() {
-  return gulp.src(['./src/jade/*.jade','!./src/jade/_*.jade'])
+  return gulp.src(['./src/jade/*.jade', '!./src/jade/_*.jade'])
     .pipe(plumber({
         errorHandler: notify.onError(err => ({
           title: 'Jade',
@@ -34,6 +34,7 @@ gulp.task('jade-templates', function() {
     .pipe(gulp.dest('./build/'))
     .pipe(browserSync.stream());
   });
+
 
 // Собираем CSS из SASS файлов
 gulp.task('sass-dev', function() {

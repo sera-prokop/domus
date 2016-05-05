@@ -1,0 +1,116 @@
+/*-------- Kitchen promo ---------*/
+
+.kitchen-promo{
+  background: url("../img/kitchen/promo-bg.png") 0 0 no-repeat;
+  background-size: cover;
+  padding: 20px 30px 68px 30px;
+  @include clearfix;
+  &__left{
+    float: left;
+    width: 640px;
+  }
+  &__breadcrumbs{
+    font-family: 'proxima_nova_ltlight', sans-serif;
+    font-size: 14px;
+    a{
+      text-decoration: none;
+      color: #2e2e2e;
+      padding: 0 5px;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__title{
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 48px;
+    color: #2e2e2e;
+    margin: 0;
+    padding-top: 120px;
+    width: 500px;
+    span{
+      display: block;
+    }
+  }
+  &__right{
+    float: right;
+    width: 300px;
+  }
+  &__form-block{
+    background: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    padding: 30px;
+    color: #2e2e2e;
+  }
+  &__form-title{
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 25px;
+  }
+  &__form-descr{
+    margin: 0;
+    font-family: 'proxima_nova_ltlight', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    padding-bottom: 25px;
+  }
+  &__input{
+    padding: 8px 15px;
+    border: 1px solid #dadada;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'proxima_nova_ltlight', sans-serif;
+    font-size: 11px;
+    line-height: 2.2;
+    outline: none;
+    color: #2e2e2e;
+  }
+  &__button{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 0;
+    background: #ed573e;
+    font-family: 'proxima_nova_ltlight', sans-serif;
+    font-size: 11px;
+    line-height: 2.2;
+    color: #fff;
+    text-transform: uppercase;
+    outline: none;
+    &:hover{
+      background: #dd4a31;
+    }
+  }
+}
+
+
+/*-------- Kitchen steps --------*/
+
+
+.kitchen-steps{
+  @include clearfix;
+  background: #fff url("../img/kitchen/steps-pic.png") 0 0 no-repeat;
+  &__left{
+    float: left;
+    width: 325px;
+    background: #fff url("../img/kitchen/steps-pic.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    padding: 1px;
+
+  }
+  &__right{
+    float: right;
+    width: 675px;
+    box-sizing: border-box;
+    padding: 50px 50px 50px 25px;
+    background: #fff;
+  }
+  &__title{
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 30px;
+  }
+}

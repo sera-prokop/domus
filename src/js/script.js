@@ -18,7 +18,7 @@ $(document).ready(function(){
     loop: true,
     nav:true,
     navText: false,
-    autoplay: true,
+    // autoplay: true,
     autoplayHoverPause: true
   });
 

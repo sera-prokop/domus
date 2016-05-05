@@ -1,16 +1,16 @@
 -
-  var navigation = {"Услуги": ["#","services"],
-                    "Магазин": ["#","shop"],
-                    "Новости": ["#","news"],
-                    "Партнерам": ["#","partner"],
-                    "Контакты": ["#","contacts"],
-                    "Поиск": ["#","search"]
+  var navigation = {"Услуги": ["javascript:;","services"],
+                    "Магазин": ["javascript:;","shop"],
+                    "Новости": ["javascript:;","news"],
+                    "Партнерам": ["javascript:;","partner"],
+                    "Контакты": ["javascript:;","contacts"],
+                    "Поиск": ["javascript:;","search"]
                     }
 -
-  var submenu = {"Кухни" : ["#"],
-                 "Ремонт квартир" : ["#"],
-                 "Натяжные потолки" : ["#"],
-                 "Гардеробные системы" : ["#"],
+  var submenu = {"Кухни" : ["kitchen.html"],
+                 "Ремонт квартир" : ["javascript:;"],
+                 "Натяжные потолки" : ["javascript:;"],
+                 "Гардеробные системы" : ["javascript:;"],
                       }
 
 header
@@ -39,47 +39,9 @@ header
                 ul.header-submenu
                   each value, key in submenu
                     li.header-submenu__item
-                    if(key==="Кухни")
-                      a(href="#{value[0]}" class="header-submenu__link--kitchen").header-submenu__link= key
-                    else
-                      a(href="#{value[0]}").header-submenu__link= key
+                      if(key==="Кухни")
+                        a(href="#{value[0]}" class="header-submenu__link--kitchen").header-submenu__link= key
+                      else
+                        a(href="#{value[0]}").header-submenu__link= key
     .header-top__phone +7 (812) 677-51-40
-      a(href="call.html") Заказать звонок
-
-  section.owl-carousel
-    section.header-slider.owl-item
-      img(src="img/slider-img.png", alt="Furniture").header-slider__img
-      .header-slider__desc
-        h2.header-slider__title
-          a(href="#").header-slider__title-link Ремонт кухни
-        p.header-slider__name ЖК «Балтийская жемчужина»
-        .header-slider__more
-          a(href="#").header-slider__link
-            svg(xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30")
-              path.header-slider__svg.svg(fill-rule="evenodd" clip-rule="evenodd" fill="#FFF" d="M15 0C6.716 0 0 6.716 0 15c0 8.285 6.716 15 15 15s15-6.715 15-15c0-8.284-6.716-15-15-15zm1.027 22.013l-1.146-1.158 4.896-4.943H6.941v-1.979h12.928l-4.773-4.82 1.115-1.127 6.847 6.924-7.031 7.103z")
-    section.header-slider.owl-item
-      img(src="img/slider-img.png", alt="Furniture").header-slider__img
-      .header-slider__desc
-        h2.header-slider__title
-          a(href="#").header-slider__title-link Ремонт кухни
-        p.header-slider__name ЖК «Балтийская жемчужина»
-        .header-slider__more
-          a(href="#").header-slider__link
-            svg(xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30")
-              path.header-slider__svg.svg(fill-rule="evenodd" clip-rule="evenodd" fill="#FFF" d="M15 0C6.716 0 0 6.716 0 15c0 8.285 6.716 15 15 15s15-6.715 15-15c0-8.284-6.716-15-15-15zm1.027 22.013l-1.146-1.158 4.896-4.943H6.941v-1.979h12.928l-4.773-4.82 1.115-1.127 6.847 6.924-7.031 7.103z")
-    section.header-slider.owl-item
-      img(src="img/slider-img.png", alt="Furniture").header-slider__img
-      .header-slider__desc
-        h2.header-slider__title
-          a(href="#").header-slider__title-link Ремонт кухни
-        p.header-slider__name ЖК «Балтийская жемчужина»
-        .header-slider__more
-          a(href="#").header-slider__link
-            svg(xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30")
-              path.header-slider__svg.svg(fill-rule="evenodd" clip-rule="evenodd" fill="#FFF" d="M15 0C6.716 0 0 6.716 0 15c0 8.285 6.716 15 15 15s15-6.715 15-15c0-8.284-6.716-15-15-15zm1.027 22.013l-1.146-1.158 4.896-4.943H6.941v-1.979h12.928l-4.773-4.82 1.115-1.127 6.847 6.924-7.031 7.103z")
-    //- .header-slider__switch.owl-controls
-    //-   .owl-nav
-    //-     .owl-prev
-    //-       a(href="#").header-slider__arrow-left
-    //-     .owl-next
-    //-       a(href="#").header-slider__arrow-right
+      a(href="pages/call.html") Заказать звонок
