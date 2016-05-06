@@ -49,6 +49,19 @@
 
 .main-kitchen, .main-repairs, .main-roof, .main-wardrobe{
   margin-bottom: 2px;
+  &__link{
+    display: inline-block;
+    width: 245px;
+    text-decoration: none;
+    &:hover .main-section__title{
+      transition: all 0.25s ease-in-out;
+      color: red;
+    }
+    &:hover .svg{
+      fill: red;
+      transition: all 0.25s ease-in-out;
+    }
+  }
   &__title{
     width: 245px;
     font-family: 'proxima_nova_rgbold', sans-serif;
@@ -226,23 +239,25 @@
       font-family: 'proxima_nova_ltlight', sans-serif;
       font-size: 12px;
     }
-    h3{
+    .title-link{
+      background: none;
+      color: #000;
       font-family: 'proxima_nova_rgbold', sans-serif;
       margin: 0 20px 10px 20px;
-      a{
-        font-size: 20px;
+      font-size: 20px;
+      text-decoration: none;
+      padding: 0;
+      text-transform: none;
+      &:hover{
         text-decoration: none;
-        padding: 0;
         background: none;
-        color: #000;
+        color: #aaa;
+        transition: color 0.25s;
+        text-decoration: none;
+      }
+      h3{
+        font-size: 20px;
         margin: 0;
-        text-transform: none;
-        &:hover{
-          background: none;
-          color: #aaa;
-          transition: color 0.25s;
-          text-decoration: none;
-        }
       }
     }
     p{

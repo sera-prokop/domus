@@ -120,6 +120,7 @@
   &__menu{
     text-align: justify;
     padding-bottom: 3px;
+    margin-bottom: 30px;
     border-bottom: 2px solid #eaeaea;
     &:after{
       content: "";
@@ -189,26 +190,66 @@
       margin: 0;
       padding: 0;
       list-style-type: none;
+      font-size: 0;
     }
     &__item{
       display: inline-block;
       vertical-align: middle;
-      width: 100px;
     }
     &__link{
       text-decoration: none;
       font-family: 'proxima_nova_ltlight', sans-serif;
       font-size: 14px;
       color: #2e2e2e;
+      display: block;
+      &:hover .kitchen-slider-facade__img:after, &:hover .kitchen-slider-tabletop__img:after, &:hover .kitchen-slider-washing__img:after, &:hover .kitchen-slider-tap__img:after{
+        content: "";
+        background: url("../img/zoom.png") 0 0 no-repeat;
+        display: block;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+      }
+
     }
-    &__img{
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
+    &__name{
+      text-align: center;
     }
   }
 }
 
+.kitchen-slider-facade, .kitchen-slider-tabletop{
+  &__img{
+    position: relative;
+    img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+  }
+}
+
+.kitchen-slider-washing{
+  &__img{
+    position: relative;
+    img{
+      width: 200px;
+    }
+  }
+}
+
+.kitchen-slider-tap{
+  &__img{
+    width: 150px;
+    position: relative;
+    img{
+      width: 150px;
+    }
+  }
+}
 
 
 /*-------- Kitchen work --------*/
@@ -370,11 +411,13 @@
       margin: 0;
     }
     a{
+      font-family: 'proxima_nova_rgbold', sans-serif;
       color: #ed573e;
       text-decoration: none;
+      border-bottom: 1px solid #fad5cf;
       &:hover{
         color: #dd4a31;
-        text-decoration: underline;
+        border-bottom: 1px solid #dd4a31;
       }
     }
   }
@@ -442,5 +485,188 @@
 
 
 /*-------- Kitchen reviews --------*/
+
+.kitchen-reviews{
+  padding: 55px 30px;
+  background: #fff;
+  box-sizing: border-box;
+  @include clearfix;
+  &__title{
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 30px;
+    margin: 0;
+    color: #2e2e2e;
+    padding-bottom: 30px;
+  }
+  &__title-link{
+    margin-left: 30px;
+    font-size: 14px;
+    color: #ed573e;
+    border-bottom: 1px solid #fad5cf;
+    text-decoration: none;
+    &:hover{
+      border-bottom: 1px solid #dd4a31;
+      color: #dd4a31;
+    }
+  }
+  &__left{
+    float: left;
+    width: 470px;
+  }
+  &__right{
+    float: right;
+    width: 470px;
+  }
+  &__img-block{
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    padding: 0 20px;
+  }
+  &__img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: right;
+    img{
+    max-width: 150px;
+    max-height: 120px;
+    }
+  }
+  &__name{
+    text-align: center;
+    font-size: 14px;
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    color: #585858;
+    &:after{
+      content: "";
+      background: url(../img/vk_otzivi.svg) 0 0 no-repeat;
+      width: 20px;
+      height: 12px;
+      display: block;
+      margin: 0 auto;
+      margin-top: 5px;
+    }
+  }
+  &__reviews-block{
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 30px;
+    background: #f7f7f7;
+    margin-left: 15px;
+
+    p{
+      margin: 0;
+      font-family: 'proxima_nova_ltlight', sans-serif;
+      font-size: 14px;
+      color: #2e2e2e;
+      line-height: 1.7;
+    }
+  }
+  &__reviews-link{
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    text-decoration: none;
+    border-bottom: 1px dotted #ed573e;
+    color: #ed573e;
+    margin-left: 5px;
+    &:hover{
+      color: #dd4a31;
+      border-bottom: 1px solid #dd4a31;
+    }
+  }
+}
+
+
+/*-------- Kitchen useful --------*/
+
+.kitchen-useful{
+  padding: 60px 30px 20px 30px;
+  background: #f5f3f3;
+  overflow: hidden;
+  &__title{
+    font-family: 'proxima_nova_rgbold', sans-serif;
+    font-size: 30px;
+    margin: 0;
+    color: #2e2e2e;
+    padding-bottom: 30px;
+  }
+  &__title-link{
+    margin-left: 30px;
+    font-size: 14px;
+    color: #ed573e;
+    border-bottom: 1px solid #fad5cf;
+    text-decoration: none;
+    &:hover{
+      border-bottom: 1px solid #dd4a31;
+      color: #dd4a31;
+    }
+  }
+  &__news{
+    @include clearfix;
+    img{
+      width: 300px;
+      height: 185px;
+      vertical-align: middle;
+      margin-bottom: 20px;
+    }
+    a{
+      display: inline-block;
+      margin: 0 20px;
+      padding: 6px 6px 6px 6px;
+      font-family: 'proxima_nova_rgbold', sans-serif;
+      font-size: 11px;
+      text-decoration: none;
+      color: #fff;
+      background: #ed573e;
+      border-radius: 20px;
+      text-transform: uppercase;
+      margin-right: 10px;
+      margin-bottom: 25px;
+      &:hover{
+        text-decoration: underline;
+        // background: #dd4a31;
+      }
+    }
+    span{
+      font-family: 'proxima_nova_ltlight', sans-serif;
+      font-size: 12px;
+      color: #2e2e2e;
+    }
+    p {
+      margin: 0;
+      a{
+      font-family: 'proxima_nova_ltlight', sans-serif;
+      margin: 0 20px;
+      font-size: 14px;
+      line-height: 1.7;
+      background: none;
+      color: #2e2e2e;
+      text-transform: none;
+      &:hover{
+        background: none;
+        text-decoration: none;
+        color: #ed573e;
+        }
+      }
+    }
+  }
+  &__small-news{
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+    background: #fff;
+    // padding-bottom: 60px;
+    padding-bottom: 20000px;
+    margin-bottom: -20000px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+
+}
 
 

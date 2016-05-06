@@ -43,5 +43,6 @@ header
                         a(href="#{value[0]}" class="header-submenu__link--kitchen").header-submenu__link= key
                       else
                         a(href="#{value[0]}").header-submenu__link= key
-    .header-top__phone +7 (812) 677-51-40
-      a(href="pages/call.html") Заказать звонок
+    .header-top__phone
+      a.header-top__phone-link(href="tel:+78126775140") +7 (812) 677-51-40
+      a.header-top__phone-order(href="pages/call.html") Заказать звонок

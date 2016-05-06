@@ -26,13 +26,20 @@
     font-size: 21px;
     line-height: 1.172;
     text-align: right;
-    a{
-      display: block;
-      font-size: 14px;
-      color: #ed573e;
-      &:hover{
-        color: #dd4a31;
-      }
+  }
+  &__phone-link{
+    color: #2e2e2e;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__phone-order{
+    display: block;
+    font-size: 14px;
+    color: #ed573e;
+    &:hover{
+      color: #dd4a31;
     }
   }
 }

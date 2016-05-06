@@ -3,12 +3,6 @@ html(lang="ru-RU")
   block head
     include ./_includes/_head/_head.jade
   body
-    section.call
-      form(action="POST")
-        .call__cross
-        h2.call__title Заказать звонок
-        input.call__input(type="text" placeholder="Ваше имя")
-        input.call__input(type="text" placeholder="Ваш телефон")
-        button.call__button(type="submit") Перезвоните мне
+    include ./_includes/_layout/_call.jade
 
       include ./_includes/_layout/_script.jade
